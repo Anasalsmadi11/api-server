@@ -2,7 +2,7 @@
 
 
 
-let Cloth= (sequelize,DataTypes) =>
+let customerCloth= (sequelize,DataTypes) =>
     sequelize.define("clothes",{
         clothType:{
             type:DataTypes.STRING,
@@ -10,7 +10,11 @@ let Cloth= (sequelize,DataTypes) =>
         },
         color:{
             type:DataTypes.STRING
+        },
+        customerId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
         }
     })
 
-    module.exports= Cloth;
+    module.exports= customerCloth;
